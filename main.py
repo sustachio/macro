@@ -1,5 +1,6 @@
 from listener import listener
 from player import player
+from shutil import get_terminal_size
 
 import os
 from colorama import Fore, Style
@@ -7,6 +8,8 @@ from colorama import Fore, Style
 # Thanks to https://stackoverflow.com/a/684344
 def clear():
     os.system('cls' if os.name=='nt' else 'clear')
+
+size = get_terminal_size((80, 20))
 
 clear()
 option = input(f"""
